@@ -1,9 +1,8 @@
 import express from 'express'
+import DetailController from '../controller/DetailController.js';
 const Router = express.Router();
 
-Router.get('/:id', (req, res, next)=>{
-    console.log(req.params.id)
-    res.render('pages/payment',{id: req.params.id})
-})
+Router.get('/', DetailController.index)
+Router.get('/:id', DetailController.show)
 
 export default Router; 
