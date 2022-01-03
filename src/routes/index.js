@@ -1,7 +1,8 @@
-import RouterDetail from './detail.js'
+import RouterProduct from './product.js'
+
 
 function routes(app){
-    app.use('/detail', RouterDetail)
+    app.use('/products', RouterProduct)
     app.use('/', (req, res, next) => {
        return res.render('home')
     })
